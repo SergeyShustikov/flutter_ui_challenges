@@ -197,7 +197,7 @@ class _ExpandedAppBarState extends State<_ExpandedAppBar> with SingleTickerProvi
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(99),
                       border: Border.all(
-                        width: 2,
+                        width: 4,
                         color: Colors.white,
                       ),
                     ),
