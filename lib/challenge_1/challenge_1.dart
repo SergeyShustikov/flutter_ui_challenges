@@ -405,9 +405,12 @@ class _ExpandedAppBarState extends State<_ExpandedAppBar> with SingleTickerProvi
                                                   ],
                                                 ),
                                                 const SizedBox(height: 16),
-                                                const Text(
-                                                  "Pete Paquette starts in \"The Elvis Concert\" an \nunforgetable live concert experience showcasing the \nmusicial career of Elvis Presley: the 1950s. Elvis in \nthe Leather and the explosive Vegas years an \nunforgetable live concert experience showcasing the \nmusicial career of Elvis Presley: the 1950s. Elvis in \nthe Leather and the explosive Vegas years.",
-                                                  style: TextStyle(height: 1.5, fontWeight: FontWeight.w600),
+                                                Container(
+                                                  width: MediaQuery.of(context).size.width - 64,
+                                                  child: const Text(
+                                                    "Pete Paquette starts in \"The Elvis Concert\" an \nunforgetable live concert experience showcasing the musicial career of Elvis Presley: the 1950s. Elvis in the Leather and the explosive Vegas years an unforgetable live concert experience showcasing the musicial career of Elvis Presley: the 1950s. Elvis in the Leather and the explosive Vegas years.",
+                                                    style: TextStyle(height: 1.5, fontWeight: FontWeight.w600),
+                                                  ),
                                                 ),
                                                 const SizedBox(height: 16),
                                                 Row(
@@ -463,7 +466,7 @@ class _ExpandedAppBarState extends State<_ExpandedAppBar> with SingleTickerProvi
                                                     alignment: Alignment.centerLeft,
                                                     children: [
                                                       Container(
-                                                        height: 36,
+                                                        height: 50,
                                                         width: MediaQuery.of(context).size.width - 80,
                                                         padding: const EdgeInsets.only(right: 16),
                                                         decoration: BoxDecoration(
@@ -485,7 +488,7 @@ class _ExpandedAppBarState extends State<_ExpandedAppBar> with SingleTickerProvi
                                                       ),
                                                       AnimatedContainer(
                                                         curve: animationCurve,
-                                                        height: 40,
+                                                        height: 54,
                                                         width: _capacityScale,
                                                         decoration: BoxDecoration(
                                                           color: _capacityColor,
@@ -496,7 +499,7 @@ class _ExpandedAppBarState extends State<_ExpandedAppBar> with SingleTickerProvi
                                                           children: [
                                                             Positioned(
                                                               left: 16,
-                                                              top: 12,
+                                                              top: 20,
                                                               child: AnimatedOpacity(
                                                                 duration: const Duration(milliseconds: 250),
                                                                 opacity: _capacityAnimationStarted ? 1 : 0.5,
@@ -509,7 +512,7 @@ class _ExpandedAppBarState extends State<_ExpandedAppBar> with SingleTickerProvi
                                                             ),
                                                             Positioned(
                                                               right: 16,
-                                                              top: 12,
+                                                              top: 20,
                                                               child: AnimatedOpacity(
                                                                 duration: const Duration(milliseconds: 250),
                                                                 curve: animationCurve,
@@ -535,9 +538,12 @@ class _ExpandedAppBarState extends State<_ExpandedAppBar> with SingleTickerProvi
                                                   ],
                                                 ),
                                                 const SizedBox(height: 16),
-                                                Image.asset(
-                                                  "assets/images/challenge_1/map.png",
-                                                  width: MediaQuery.of(context).size.width - 80,
+                                                ClipRRect(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                  child: Image.asset(
+                                                    "assets/images/challenge_1/map.png",
+                                                    width: MediaQuery.of(context).size.width - 80,
+                                                  ),
                                                 )
                                               ],
                                             ),
